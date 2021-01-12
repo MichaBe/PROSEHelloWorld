@@ -1,0 +1,27 @@
+﻿// NAMESPACE USINGS
+using Microsoft.ProgramSynthesis.DslLibrary;
+using Microsoft.ProgramSynthesis.Utils;
+using HelloWorld.semantic; // for MyFeature
+
+// SEMANTIC USINGS
+using semantics HelloWorld.semantic.Semantics;
+
+// LEARNER USINGS (inherit DomainLearningLogic)
+using learners HelloWorld.semantic.SimpleLearner;
+
+// LANGUAGE NAME
+language HelloWorld;
+
+// FEATURES
+@complete feature double Score = MyFeature;
+
+// NON-TERMINAL SYMBOLS & RULES (ROOT, BRANCES)
+// ROOT
+@start string myFinalSubString := Substring(myInputString, posA, posB);
+// BRANCHES
+// no branches
+
+// TERMINAL SYMBOLS (/ "TERMINAL RULES") (LEAVES)
+@input string myInputString;
+@values[uiGen] int posA;
+@values[uiGen] int posB;
