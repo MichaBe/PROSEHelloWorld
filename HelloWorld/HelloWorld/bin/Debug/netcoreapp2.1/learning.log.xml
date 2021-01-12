@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root elapsed="00:00:00.1639508">
+  <_IDENTITIES>
+    <Object id="##1" type="System.String"><![CDATA[Wo]]></Object>
+  </_IDENTITIES>
+  <Learn k="all" depth="1" elapsed="00:00:00.0618603" retrievedFromCache="false" randomK="null" symbol="myFinalSubString">
+    <result>
+      <Direct size="0" symbol="myFinalSubString" />
+    </result>
+    <spec>
+      <ExampleSpec examples="1">
+        <Example i="1">
+          <State BindingsCount="1">
+            <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+            <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+          </State>
+          <Output>Wo</Output>
+        </Example>
+      </ExampleSpec>
+    </spec>
+  </Learn>
+</Root>
