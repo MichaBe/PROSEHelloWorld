@@ -5,6 +5,7 @@
   using System.Linq;
   using System.Reflection;
   using Microsoft.ProgramSynthesis;
+  using Microsoft.ProgramSynthesis.AST;
   using Microsoft.ProgramSynthesis.Compiler;
   using Microsoft.ProgramSynthesis.Learning;
   using Microsoft.ProgramSynthesis.Learning.Logging;
@@ -34,10 +35,23 @@
 
       var grammar = compilationResult.Value;
       
-      LearnProgram(grammar);
+      var program = LearnProgram(grammar);
+
+      if(program != null)
+      {
+        Console.WriteLine("Execute the first realized Program on some more input:");
+        var input = "Hallo Welt";
+        State s = State.CreateForExecution(program.Grammar.InputSymbol, input);
+        var output = (string)program.Invoke(s);
+        Console.WriteLine($"{input} -> {output}");
+      }
+      else
+      {
+        Console.WriteLine("No programm found");
+      }
     }
 
-    private static void LearnProgram(Grammar grammar)
+    private static ProgramNode LearnProgram(Grammar grammar)
     {
       var specification = ShouldConvert.Given(grammar).To("Hello World", "Wo");
 
@@ -60,19 +74,7 @@
         Console.WriteLine(p);
       }
 
-      if (consistentPrograms.RealizedPrograms.Count() == 0)
-      {
-        Console.WriteLine("No programm found");
-      }
-      else
-      {
-        Console.WriteLine("Execute the first realized Program on some more input:");
-        var program = consistentPrograms.RealizedPrograms.First();
-        var input = "Hallo Welt";
-        State s = State.CreateForExecution(program.Grammar.InputSymbol, input);
-        var output = (string)program.Invoke(s);
-        Console.WriteLine($"{input} -> {output}");
-      }
+      return consistentPrograms.RealizedPrograms.Count() == 0 ? null : consistentPrograms.RealizedPrograms.First();
     }
   }
 }
