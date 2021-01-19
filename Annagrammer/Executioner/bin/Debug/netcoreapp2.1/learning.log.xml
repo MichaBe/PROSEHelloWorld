@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root elapsed="00:03:13.7460348">
+  <_IDENTITIES>
+    <Object id="##1" type="Annagrammer.semantic.StringOfLetters"><![CDATA[alloH]]></Object>
+    <Object id="##2" type="Annagrammer.semantic.StringOfLetters"><![CDATA[aHllo]]></Object>
+  </_IDENTITIES>
+  <Learn retrievedFromCache="false" symbol="AnnagrammOutput" randomK="null" k="all" elapsed="00:00:00.2154730" depth="1">
+    <result>
+      <Direct size="0" symbol="AnnagrammOutput" />
+    </result>
+    <spec>
+      <ExampleSpec examples="1">
+        <Example i="1">
+          <State BindingsCount="1">
+            <Binding symbol="AnnagrammInput"><![CDATA[alloH]]></Binding>
+            <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+          </State>
+          <Output>aHllo</Output>
+        </Example>
+      </ExampleSpec>
+    </spec>
+    <LearnRule programCount="0" elapsed="00:00:00.1672213" rule="Swapper">
+      <result>
+        <Direct size="0" symbol="AnnagrammOutput" />
+      </result>
+      <UsePlan plan="[&quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;, &quot;GrammarRule.WitnessAll&quot;]" elapsed="00:00:00.0983055" verify="true" hasDependencies="false">
+        <Witness param="AnnagrammInput" elapsed="00:00:00.0041069" function="&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0" index="0">
+          <witness>
+            <ExampleSpec examples="1">
+              <Example i="1">
+                <State BindingsCount="1">
+                  <Binding symbol="AnnagrammInput"><![CDATA[##1]]></Binding>
+                  <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                </State>
+                <Output>##1</Output>
+              </Example>
+            </ExampleSpec>
+          </witness>
+        </Witness>
+        <Learn retrievedFromCache="false" symbol="AnnagrammInput" randomK="null" k="all" elapsed="00:00:00.0404702" depth="2">
+          <result>
+            <Direct size="1" symbol="AnnagrammInput">
+              <Program i="0"><![CDATA[AnnagrammInput]]></Program>
+            </Direct>
+          </result>
+          <spec>
+            <ExampleSpec examples="1">
+              <Example i="1">
+                <State BindingsCount="1">
+                  <Binding symbol="AnnagrammInput"><![CDATA[##1]]></Binding>
+                  <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                </State>
+                <Output>##1</Output>
+              </Example>
+            </ExampleSpec>
+          </spec>
+        </Learn>
+        <Witness param="iTop" elapsed="00:00:00.0005191" function="GrammarRule.WitnessAll" index="1">
+          <witness>
+            <TopSpec examples="0" />
+          </witness>
+        </Witness>
+        <Learn retrievedFromCache="false" symbol="iTop" randomK="null" k="all" elapsed="00:00:00.0345274" depth="2">
+          <result>
+            <Direct size="21" symbol="iTop">
+              <Program i="0"><![CDATA[0]]></Program>
+              <Program i="1"><![CDATA[1]]></Program>
+              <Program i="2"><![CDATA[2]]></Program>
+              <Program i="3"><![CDATA[3]]></Program>
+              <Program i="4"><![CDATA[4]]></Program>
+              <Program i="5"><![CDATA[5]]></Program>
+              <Program i="6"><![CDATA[6]]></Program>
+              <Program i="7"><![CDATA[7]]></Program>
+              <Program i="8"><![CDATA[8]]></Program>
+              <Program i="9"><![CDATA[9]]></Program>
+              <Program i="10"><![CDATA[10]]></Program>
+              <Program i="11"><![CDATA[11]]></Program>
+              <Program i="12"><![CDATA[12]]></Program>
+              <Program i="13"><![CDATA[13]]></Program>
+              <Program i="14"><![CDATA[14]]></Program>
+              <Program i="15"><![CDATA[15]]></Program>
+              <Program i="16"><![CDATA[16]]></Program>
+              <Program i="17"><![CDATA[17]]></Program>
+              <Program i="18"><![CDATA[18]]></Program>
+              <Program i="19"><![CDATA[19]]></Program>
+              <Program i="20"><![CDATA[20]]></Program>
+            </Direct>
+          </result>
+          <spec>
+            <TopSpec examples="0" />
+          </spec>
+        </Learn>
+      </UsePlan>
+    </LearnRule>
+  </Learn>
+</Root>
