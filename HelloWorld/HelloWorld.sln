@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld.syntax", "HelloW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld.semantic", "HelloWorld.semantic\HelloWorld.semantic.csproj", "{C211944F-CDFC-4C07-A557-1EE507B39019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{A48B5D7B-B01D-405A-B269-289971CB0952}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{A48B5D7B-B01D-405A-B269-289971CB0952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustSomeSimpleTests", "JustSomeSimpleTests\JustSomeSimpleTests.csproj", "{CC50D30E-4863-438C-8953-CD2463D29704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustSomeSimpleTests", "JustSomeSimpleTests\JustSomeSimpleTests.csproj", "{CC50D30E-4863-438C-8953-CD2463D29704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{2754632E-D56A-43CA-A841-1C40B9D6B253}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CC50D30E-4863-438C-8953-CD2463D29704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC50D30E-4863-438C-8953-CD2463D29704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC50D30E-4863-438C-8953-CD2463D29704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2754632E-D56A-43CA-A841-1C40B9D6B253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2754632E-D56A-43CA-A841-1C40B9D6B253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2754632E-D56A-43CA-A841-1C40B9D6B253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2754632E-D56A-43CA-A841-1C40B9D6B253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

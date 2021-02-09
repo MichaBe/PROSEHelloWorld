@@ -8,18 +8,11 @@
 	<ItemGroup>
 		<None Include="..\HelloWorld.syntax\HelloWorld.syntax.grammar" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
-	
-  <ItemGroup>
-    <PackageReference Include="Microsoft.ProgramSynthesis" Version="7.24.0" />
-		<PackageReference Include="Microsoft.ProgramSynthesis.Compiler" Version="7.24.0" />
-		<!--<PackageReference Include="Microsoft.ProgramSynthesis.DslcTargets" Version="7.24.0" />
-		<PackageReference Include="Microsoft.ProgramSynthesis.Common" Version="7.24.0" />
-		<DotNetCliToolReference Include="Microsoft.ProgramSynthesis.Dslc" Version="7.24.0" />-->
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HelloWorld.semantic\HelloWorld.semantic.csproj" />
     <ProjectReference Include="..\HelloWorld.syntax\HelloWorld.syntax.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
   </ItemGroup>
 
 </Project>

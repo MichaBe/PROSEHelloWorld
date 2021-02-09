@@ -1,80 +1,50 @@
 ﻿namespace HelloWorld
 {
   using System;
-  using System.IO;
   using System.Linq;
-  using System.Reflection;
-  using Microsoft.ProgramSynthesis;
-  using Microsoft.ProgramSynthesis.AST;
-  using Microsoft.ProgramSynthesis.Compiler;
-  using Microsoft.ProgramSynthesis.Learning;
-  using Microsoft.ProgramSynthesis.Learning.Logging;
-  using Microsoft.ProgramSynthesis.Learning.Strategies;
+  using HelloWorld.semantic;
   using Microsoft.ProgramSynthesis.Specifications.Extensions;
+  using Utilities;
 
   class Program
   {
     static void Main()
     {
-      var compilationResult = DSLCompiler.Compile(new CompilerOptions()
-      {
-        InputGrammarText = File.ReadAllText("HelloWorld.syntax.grammar"),
-        References = CompilerReference.FromAssemblyFiles(
-          typeof(HelloWorld.semantic.Semantics).GetTypeInfo().Assembly
-        ),
-      });
+      var grammar = Helper.LoadGrammar("HelloWorld.syntax.grammar", true, typeof(HelloWorld.semantic.Semantics), typeof(System.Text.RegularExpressions.Regex));
 
-      if (compilationResult.HasErrors)
+      var Spec = ShouldConvert.Given(grammar).To("Hello World", "He").To("hello World", "Wo");
+      
+      var program = Helper.LearnDeductively(grammar, Spec, new WitnessFunctions(grammar), "learning_ded.log.xml");
+
+      if(program.IsEmpty)
       {
-        foreach (var error in compilationResult.Diagnostics)
-        {
-          Console.WriteLine($"[{error.Location}]: {error.Message}");
-        }
+        Console.WriteLine("Could not learn any program.");
         return;
       }
 
-      var grammar = compilationResult.Value;
-      
-      var program = LearnProgram(grammar);
+      /*var programs = Helper.Learn(grammar, ShouldConvert.Given(grammar).To("Hello World", "Wo"), "learning.log.xml"); //LearnProgram(grammar);
+      var bestPrograms = Helper.RankPrograms(programs, 10, new MyFeature(grammar));
 
-      if(program != null)
+      var scorer = new MyFeature(grammar);
+      var funcCounter = new FunctionCounter(grammar);
+      foreach (var p in bestPrograms)
+      {
+        Console.WriteLine($"[Score: {p.GetFeatureValue(scorer):F3}, Function calls: {p.GetFeatureValue(funcCounter)}] {p}");
+      }
+
+      var bestProgram = bestPrograms.First();
+
+      if (bestProgram != null)
       {
         Console.WriteLine("Execute the first realized Program on some more input:");
-        var input = "Hallo Welt";
-        State s = State.CreateForExecution(program.Grammar.InputSymbol, input);
-        var output = (string)program.Invoke(s);
+        var input = "Dies ist ein Test";
+        var output = (string)Helper.ExecuteOn(bestProgram, input);
         Console.WriteLine($"{input} -> {output}");
       }
       else
       {
         Console.WriteLine("No programm found");
-      }
-    }
-
-    private static ProgramNode LearnProgram(Grammar grammar)
-    {
-      var specification = ShouldConvert.Given(grammar).To("Hello World", "Wo");
-
-      var engine = new SynthesisEngine(grammar, new SynthesisEngine.Config
-      {
-        Strategies = new ISynthesisStrategy[] {
-          new EnumerativeSynthesis(new EnumerativeSynthesis.Config{MaximalSize = 100}),
-          //new DeductiveSynthesis(null)
-        },
-        UseThreads = true,
-        LogListener = new LogListener(),
-      });
-
-      var consistentPrograms = engine.LearnGrammar(specification);
-      engine.Configuration.LogListener.SaveLogToXML("learning.log.xml");
-
-      Console.WriteLine("Found the following programms:");
-      foreach (var p in consistentPrograms.RealizedPrograms)
-      {
-        Console.WriteLine(p);
-      }
-
-      return consistentPrograms.RealizedPrograms.Count() == 0 ? null : consistentPrograms.RealizedPrograms.First();
+      }*/
     }
   }
 }

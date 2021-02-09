@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root elapsed="00:00:08.0355480">
+  <_IDENTITIES>
+    <Object id="##1" type="System.String"><![CDATA[He]]></Object>
+    <Object id="##2" type="System.String"><![CDATA[Wo]]></Object>
+    <Object id="##3" type="System.String"><![CDATA[Hello World]]></Object>
+    <Object id="##4" type="System.String"><![CDATA[hello World]]></Object>
+    <Object id="##5" type="System.Int32"><![CDATA[2]]></Object>
+    <Object id="##6" type="System.Int32"><![CDATA[0]]></Object>
+    <Object id="##7" type="System.Int32"><![CDATA[6]]></Object>
+  </_IDENTITIES>
+  <Learn randomK="null" k="all" depth="1" retrievedFromCache="false" symbol="myFinalSubString" elapsed="00:00:07.8123005">
+    <result>
+      <Direct size="0" symbol="myFinalSubString" />
+    </result>
+    <spec>
+      <ExampleSpec examples="2">
+        <Example i="1">
+          <State BindingsCount="1">
+            <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+            <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+          </State>
+          <Output>He</Output>
+        </Example>
+        <Example i="2">
+          <State BindingsCount="1">
+            <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+            <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+          </State>
+          <Output>Wo</Output>
+        </Example>
+      </ExampleSpec>
+    </spec>
+    <LearnRule programCount="0" rule="Substring" elapsed="00:00:07.7535223">
+      <result>
+        <Direct size="0" symbol="myFinalSubString" />
+      </result>
+      <UsePlan hasDependencies="true" elapsed="00:00:07.7208202" plan="[&quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;, &quot;WitnessFunctions.WitnessSubstring_startPos&quot;, &quot;WitnessFunctions.WitnessSubstring_length&quot;]" verify="false">
+        <Witness index="2" function="WitnessFunctions.WitnessSubstring_length" param="length" elapsed="00:00:02.0168533">
+          <witness>
+            <DisjunctiveExamplesSpec examples="2">
+              <Example i="1">
+                <State BindingsCount="1">
+                  <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                  <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                </State>
+                <AnyOf size="1">
+                  <Item i="0"><![CDATA[2]]></Item>
+                </AnyOf>
+              </Example>
+              <Example i="2">
+                <State BindingsCount="1">
+                  <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                  <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                </State>
+                <AnyOf size="1">
+                  <Item i="0"><![CDATA[2]]></Item>
+                </AnyOf>
+              </Example>
+            </DisjunctiveExamplesSpec>
+          </witness>
+        </Witness>
+        <Learn randomK="null" k="all" depth="2" retrievedFromCache="false" symbol="length" elapsed="00:00:00.0532409">
+          <result>
+            <Direct size="1" symbol="length">
+              <Program i="0"><![CDATA[2]]></Program>
+            </Direct>
+          </result>
+          <spec>
+            <DisjunctiveExamplesSpec examples="2">
+              <Example i="1">
+                <State BindingsCount="1">
+                  <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                  <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                </State>
+                <AnyOf size="1">
+                  <Item i="0"><![CDATA[2]]></Item>
+                </AnyOf>
+              </Example>
+              <Example i="2">
+                <State BindingsCount="1">
+                  <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                  <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                </State>
+                <AnyOf size="1">
+                  <Item i="0"><![CDATA[2]]></Item>
+                </AnyOf>
+              </Example>
+            </DisjunctiveExamplesSpec>
+          </spec>
+          <LearnRule programCount="1" rule="length := System.Int32" usedLearner="LiteralLearner_Examples" elapsed="00:00:00.0177961">
+            <result>
+              <Direct size="1" symbol="length">
+                <Program i="0"><![CDATA[2]]></Program>
+              </Direct>
+            </result>
+          </LearnRule>
+        </Learn>
+        <Cluster programCount="0" i="1" for="length" elapsed="00:00:05.5997851">
+          <output size="2">
+            <Item i="0"><![CDATA[2]]></Item>
+            <Item i="1"><![CDATA[2]]></Item>
+          </output>
+          <programCluster>
+            <Direct size="1" symbol="length">
+              <Program i="0"><![CDATA[2]]></Program>
+            </Direct>
+          </programCluster>
+          <Witness index="0" function="&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0" param="myInputString" elapsed="00:00:00.0009316">
+            <witness>
+              <ExampleSpec examples="2">
+                <Example i="1">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>Hello World</Output>
+                </Example>
+                <Example i="2">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>hello World</Output>
+                </Example>
+              </ExampleSpec>
+            </witness>
+          </Witness>
+          <Learn randomK="null" k="all" depth="2" retrievedFromCache="false" symbol="myInputString" elapsed="00:00:00.0225727">
+            <result>
+              <Direct size="1" symbol="myInputString">
+                <Program i="0"><![CDATA[myInputString]]></Program>
+              </Direct>
+            </result>
+            <spec>
+              <ExampleSpec examples="2">
+                <Example i="1">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>##3</Output>
+                </Example>
+                <Example i="2">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>##4</Output>
+                </Example>
+              </ExampleSpec>
+            </spec>
+          </Learn>
+          <Witness index="1" function="WitnessFunctions.WitnessSubstring_startPos" param="startPos" elapsed="00:00:05.4904145">
+            <witness>
+              <DisjunctiveExamplesSpec examples="2">
+                <Example i="1">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <AnyOf size="1">
+                    <Item i="0"><![CDATA[0]]></Item>
+                  </AnyOf>
+                </Example>
+                <Example i="2">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <AnyOf size="1">
+                    <Item i="0"><![CDATA[6]]></Item>
+                  </AnyOf>
+                </Example>
+              </DisjunctiveExamplesSpec>
+            </witness>
+            <prereqs.myInputString>
+              <ExampleSpec examples="2">
+                <Example i="1">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>##3</Output>
+                </Example>
+                <Example i="2">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>##4</Output>
+                </Example>
+              </ExampleSpec>
+            </prereqs.myInputString>
+            <prereqs.length>
+              <ExampleSpec examples="2">
+                <Example i="1">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>2</Output>
+                </Example>
+                <Example i="2">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <Output>##5</Output>
+                </Example>
+              </ExampleSpec>
+            </prereqs.length>
+          </Witness>
+          <Learn randomK="null" k="all" depth="2" retrievedFromCache="false" symbol="startPos" elapsed="00:00:00.0585444">
+            <result>
+              <Direct size="0" symbol="startPos" />
+            </result>
+            <spec>
+              <DisjunctiveExamplesSpec examples="2">
+                <Example i="1">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <AnyOf size="1">
+                    <Item i="0"><![CDATA[0]]></Item>
+                  </AnyOf>
+                </Example>
+                <Example i="2">
+                  <State BindingsCount="1">
+                    <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                    <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                  </State>
+                  <AnyOf size="1">
+                    <Item i="0"><![CDATA[6]]></Item>
+                  </AnyOf>
+                </Example>
+              </DisjunctiveExamplesSpec>
+            </spec>
+            <LearnRule programCount="0" rule="RegexFunction" elapsed="00:00:00.0173456">
+              <result>
+                <Direct size="0" symbol="startPos" />
+              </result>
+              <UsePlan hasDependencies="false" elapsed="00:00:00.0165557" plan="[&quot;GrammarRule.WitnessAll&quot;, &quot;GrammarRule.WitnessAll&quot;, &quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;]" verify="true">
+                <Witness index="0" function="GrammarRule.WitnessAll" param="iTH" elapsed="00:00:00.0003411">
+                  <witness>
+                    <TopSpec examples="0" />
+                  </witness>
+                </Witness>
+                <Learn randomK="null" k="all" depth="3" retrievedFromCache="false" symbol="iTH" elapsed="00:00:00.0155548">
+                  <result>
+                    <Direct size="0" symbol="iTH" />
+                  </result>
+                  <spec>
+                    <TopSpec examples="0" />
+                  </spec>
+                </Learn>
+              </UsePlan>
+            </LearnRule>
+            <LearnRule programCount="0" rule="~convert_startPos_posA" elapsed="00:00:00.0257041">
+              <result>
+                <Direct size="0" symbol="startPos" />
+              </result>
+              <UsePlan hasDependencies="false" elapsed="00:00:00.0150849" plan="[&quot;ConversionWitnessingPlan.Witness&quot;]" verify="false">
+                <Witness index="0" function="ConversionWitnessingPlan.Witness" param="posA" elapsed="00:00:00.0026791">
+                  <witness>
+                    <ExampleSpec examples="2">
+                      <Example i="1">
+                        <State BindingsCount="1">
+                          <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                          <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                        </State>
+                        <Output>0</Output>
+                      </Example>
+                      <Example i="2">
+                        <State BindingsCount="1">
+                          <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                          <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                        </State>
+                        <Output>6</Output>
+                      </Example>
+                    </ExampleSpec>
+                  </witness>
+                </Witness>
+                <Learn randomK="null" k="all" depth="3" retrievedFromCache="false" symbol="posA" elapsed="00:00:00.0123747">
+                  <result>
+                    <Direct size="0" symbol="posA" />
+                  </result>
+                  <spec>
+                    <ExampleSpec examples="2">
+                      <Example i="1">
+                        <State BindingsCount="1">
+                          <Binding symbol="myInputString"><![CDATA["Hello World"]]></Binding>
+                          <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                        </State>
+                        <Output>##6</Output>
+                      </Example>
+                      <Example i="2">
+                        <State BindingsCount="1">
+                          <Binding symbol="myInputString"><![CDATA["hello World"]]></Binding>
+                          <FunctionalInput><![CDATA[Nothing]]></FunctionalInput>
+                        </State>
+                        <Output>##7</Output>
+                      </Example>
+                    </ExampleSpec>
+                  </spec>
+                  <LearnRule programCount="0" rule="posA := System.Int32" usedLearner="LiteralLearner_Examples" elapsed="00:00:00.0002551">
+                    <result>
+                      <Direct size="0" symbol="posA" />
+                    </result>
+                  </LearnRule>
+                </Learn>
+              </UsePlan>
+            </LearnRule>
+          </Learn>
+        </Cluster>
+      </UsePlan>
+    </LearnRule>
+  </Learn>
+</Root>

@@ -1,19 +1,31 @@
 ﻿namespace HelloWorld.semantic
 {
   //using Microsoft.ProgramSynthesis.DslLibrary;
+  using System.Text.RegularExpressions;
 
   public static class Semantics
   {
-    public static string Substring(string sr, int p1, int p2)
+    public static string Substring(string sr, int? start, int length)
     {
-      if(p1 < 0 || sr.Length < p1 || p2 < 0 || sr.Length < p2 || sr.Length < p1+p2)
+      if(start == null || start < 0 || sr.Length < start || length < 0 || sr.Length < length || sr.Length < start+length)
       {
         return null;
       }
       else
       {
-        return sr.Substring(p1, p2);
+        return sr.Substring((int)start, length);
       }
+    }
+
+    public static int? RegexFunction(int i, Regex regex, string s)
+    {
+      var m = regex.Matches(s);
+      return m.Count != 0 && i < m.Count ? m[i].Index : (int?)null;
+    }
+
+    public static int? AbsPos(string s, int pos)
+    {
+      return 0 <= pos && pos < s.Length ? pos : (int?)null;
     }
   }
 }

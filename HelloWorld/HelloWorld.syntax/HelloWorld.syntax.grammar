@@ -1,27 +1,29 @@
 ﻿// NAMESPACE USINGS
-using Microsoft.ProgramSynthesis.DslLibrary;
-using Microsoft.ProgramSynthesis.Utils;
-using HelloWorld.semantic; // for MyFeature
+using HelloWorld.semantic;
+using System.Text.RegularExpressions;
 
 // SEMANTIC USINGS
-using semantics HelloWorld.semantic.Semantics;
+using semantics Semantics;
 
-// LEARNER USINGS (inherit DomainLearningLogic)
-using learners HelloWorld.semantic.SimpleLearner;
+// LEARNER USINGS (inherit DomainLearningLogic for DeductiveSearch)
+using learners WitnessFunctions;
 
 // LANGUAGE NAME
 language HelloWorld;
 
 // FEATURES
-@complete feature double Score = MyFeature;
+@complete feature double MyScore = MyFeature;
+@complete feature int funCount = FunctionCounter;
 
 // NON-TERMINAL SYMBOLS & RULES (ROOT, BRANCES)
 // ROOT
-@start string myFinalSubString := Substring(myInputString, posA, posB);
+@start string myFinalSubString := Substring(myInputString, startPos, length);
 // BRANCHES
-// no branches
+int? startPos := RegexFunction(iTH, r, myInputString) | posA;
 
 // TERMINAL SYMBOLS (/ "TERMINAL RULES") (LEAVES)
 @input string myInputString;
-@values[uiGen] int posA;
-@values[uiGen] int posB;
+int posA;
+int length;
+Regex r;
+int iTH;

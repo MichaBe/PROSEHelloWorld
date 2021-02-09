@@ -1,0 +1,24 @@
+﻿// NAMESPACE USINGS
+using Annagrammer.semantic;
+
+// SEMANTIC USINGS
+using semantics Annagrammer.semantic.Semantics;
+
+// LEARNER USINGS
+using learners Annagrammer.semantic.NumberGenerator;
+
+// LANGUAGE NAME
+language Annagrammer;
+
+// FEATURES
+
+// NON-TERMINALS (ROOT & BRANCHES)
+// ROOT
+@start StringOfLetters AnnagrammOutput := Swapper(AnnagrammInput, iTop);
+
+// BRANCHES
+//no branches
+
+// TERMINALS (LEAVES)
+@input StringOfLetters AnnagrammInput;
+@values[iGen20] int iTop;

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp2.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Annagrammer.semantics\Annagrammer.semantics.csproj" />
+		<PackageReference Include="Microsoft.ProgramSynthesis.Common" Version="7.24.0" />
+		<PackageReference Include="Microsoft.ProgramSynthesis.DslcTargets" Version="7.24.0" />
+		<DotNetCliToolReference Include="Microsoft.ProgramSynthesis.Dslc" Version="7.24.0" />
+	</ItemGroup>
+
+</Project>

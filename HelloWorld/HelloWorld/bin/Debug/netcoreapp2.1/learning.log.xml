@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Root elapsed="00:00:00.1639508">
+<Root elapsed="00:00:00.0866444">
   <_IDENTITIES>
     <Object id="##1" type="System.String"><![CDATA[Wo]]></Object>
   </_IDENTITIES>
-  <Learn k="all" depth="1" elapsed="00:00:00.0618603" retrievedFromCache="false" randomK="null" symbol="myFinalSubString">
-    <result>
-      <Direct size="0" symbol="myFinalSubString" />
-    </result>
+  <Learn symbol="myFinalSubString" k="all" randomK="null" elapsed="00:00:00.0866222" depth="1">
     <spec>
       <ExampleSpec examples="1">
         <Example i="1">

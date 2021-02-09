@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Root elapsed="00:03:13.7460348">
+<Root elapsed="00:00:58.1366156">
   <_IDENTITIES>
     <Object id="##1" type="Annagrammer.semantic.StringOfLetters"><![CDATA[alloH]]></Object>
     <Object id="##2" type="Annagrammer.semantic.StringOfLetters"><![CDATA[aHllo]]></Object>
   </_IDENTITIES>
-  <Learn retrievedFromCache="false" symbol="AnnagrammOutput" randomK="null" k="all" elapsed="00:00:00.2154730" depth="1">
+  <Learn elapsed="00:00:00.1934462" retrievedFromCache="false" k="all" symbol="AnnagrammOutput" randomK="null" depth="1">
     <result>
       <Direct size="0" symbol="AnnagrammOutput" />
     </result>
@@ -19,12 +19,12 @@
         </Example>
       </ExampleSpec>
     </spec>
-    <LearnRule programCount="0" elapsed="00:00:00.1672213" rule="Swapper">
+    <LearnRule elapsed="00:00:00.1456294" programCount="0" rule="Swapper">
       <result>
         <Direct size="0" symbol="AnnagrammOutput" />
       </result>
-      <UsePlan plan="[&quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;, &quot;GrammarRule.WitnessAll&quot;]" elapsed="00:00:00.0983055" verify="true" hasDependencies="false">
-        <Witness param="AnnagrammInput" elapsed="00:00:00.0041069" function="&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0" index="0">
+      <UsePlan elapsed="00:00:00.0857798" plan="[&quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;, &quot;GrammarRule.WitnessAll&quot;]" hasDependencies="false" verify="true">
+        <Witness param="AnnagrammInput" elapsed="00:00:00.0031656" function="&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0" index="0">
           <witness>
             <ExampleSpec examples="1">
               <Example i="1">
@@ -37,7 +37,7 @@
             </ExampleSpec>
           </witness>
         </Witness>
-        <Learn retrievedFromCache="false" symbol="AnnagrammInput" randomK="null" k="all" elapsed="00:00:00.0404702" depth="2">
+        <Learn elapsed="00:00:00.0371006" retrievedFromCache="false" k="all" symbol="AnnagrammInput" randomK="null" depth="2">
           <result>
             <Direct size="1" symbol="AnnagrammInput">
               <Program i="0"><![CDATA[AnnagrammInput]]></Program>
@@ -55,12 +55,12 @@
             </ExampleSpec>
           </spec>
         </Learn>
-        <Witness param="iTop" elapsed="00:00:00.0005191" function="GrammarRule.WitnessAll" index="1">
+        <Witness param="iTop" elapsed="00:00:00.0003311" function="GrammarRule.WitnessAll" index="1">
           <witness>
             <TopSpec examples="0" />
           </witness>
         </Witness>
-        <Learn retrievedFromCache="false" symbol="iTop" randomK="null" k="all" elapsed="00:00:00.0345274" depth="2">
+        <Learn elapsed="00:00:00.0319622" retrievedFromCache="false" k="all" symbol="iTop" randomK="null" depth="2">
           <result>
             <Direct size="21" symbol="iTop">
               <Program i="0"><![CDATA[0]]></Program>
