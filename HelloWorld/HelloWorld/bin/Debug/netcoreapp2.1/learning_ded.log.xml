@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Root elapsed="00:00:08.0355480">
+<Root elapsed="00:00:10.8265573">
   <_IDENTITIES>
     <Object id="##1" type="System.String"><![CDATA[He]]></Object>
     <Object id="##2" type="System.String"><![CDATA[Wo]]></Object>
@@ -9,10 +9,7 @@
     <Object id="##6" type="System.Int32"><![CDATA[0]]></Object>
     <Object id="##7" type="System.Int32"><![CDATA[6]]></Object>
   </_IDENTITIES>
-  <Learn randomK="null" k="all" depth="1" retrievedFromCache="false" symbol="myFinalSubString" elapsed="00:00:07.8123005">
-    <result>
-      <Direct size="0" symbol="myFinalSubString" />
-    </result>
+  <Learn randomK="null" retrievedFromCache="false" k="all" symbol="myFinalSubString" depth="1" elapsed="00:00:10.5392148">
     <spec>
       <ExampleSpec examples="2">
         <Example i="1">
@@ -31,12 +28,15 @@
         </Example>
       </ExampleSpec>
     </spec>
-    <LearnRule programCount="0" rule="Substring" elapsed="00:00:07.7535223">
+    <result>
+      <Direct size="0" symbol="myFinalSubString" />
+    </result>
+    <LearnRule programCount="0" elapsed="00:00:10.5023868" rule="Substring">
       <result>
         <Direct size="0" symbol="myFinalSubString" />
       </result>
-      <UsePlan hasDependencies="true" elapsed="00:00:07.7208202" plan="[&quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;, &quot;WitnessFunctions.WitnessSubstring_startPos&quot;, &quot;WitnessFunctions.WitnessSubstring_length&quot;]" verify="false">
-        <Witness index="2" function="WitnessFunctions.WitnessSubstring_length" param="length" elapsed="00:00:02.0168533">
+      <UsePlan plan="[&quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;, &quot;WitnessFunctions.WitnessSubstring_startPos&quot;, &quot;WitnessFunctions.WitnessSubstring_length&quot;]" hasDependencies="true" elapsed="00:00:10.4630176" verify="false">
+        <Witness function="WitnessFunctions.WitnessSubstring_length" index="2" param="length" elapsed="00:00:05.4730792">
           <witness>
             <DisjunctiveExamplesSpec examples="2">
               <Example i="1">
@@ -60,12 +60,7 @@
             </DisjunctiveExamplesSpec>
           </witness>
         </Witness>
-        <Learn randomK="null" k="all" depth="2" retrievedFromCache="false" symbol="length" elapsed="00:00:00.0532409">
-          <result>
-            <Direct size="1" symbol="length">
-              <Program i="0"><![CDATA[2]]></Program>
-            </Direct>
-          </result>
+        <Learn randomK="null" retrievedFromCache="false" k="all" symbol="length" depth="2" elapsed="00:00:00.0527587">
           <spec>
             <DisjunctiveExamplesSpec examples="2">
               <Example i="1">
@@ -88,7 +83,12 @@
               </Example>
             </DisjunctiveExamplesSpec>
           </spec>
-          <LearnRule programCount="1" rule="length := System.Int32" usedLearner="LiteralLearner_Examples" elapsed="00:00:00.0177961">
+          <result>
+            <Direct size="1" symbol="length">
+              <Program i="0"><![CDATA[2]]></Program>
+            </Direct>
+          </result>
+          <LearnRule programCount="1" elapsed="00:00:00.0190106" rule="length := System.Int32" usedLearner="LiteralLearner_Examples">
             <result>
               <Direct size="1" symbol="length">
                 <Program i="0"><![CDATA[2]]></Program>
@@ -96,7 +96,7 @@
             </result>
           </LearnRule>
         </Learn>
-        <Cluster programCount="0" i="1" for="length" elapsed="00:00:05.5997851">
+        <Cluster for="length" i="1" programCount="0" elapsed="00:00:04.8882282">
           <output size="2">
             <Item i="0"><![CDATA[2]]></Item>
             <Item i="1"><![CDATA[2]]></Item>
@@ -106,7 +106,7 @@
               <Program i="0"><![CDATA[2]]></Program>
             </Direct>
           </programCluster>
-          <Witness index="0" function="&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0" param="myInputString" elapsed="00:00:00.0009316">
+          <Witness function="&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0" index="0" param="myInputString" elapsed="00:00:00.0009018">
             <witness>
               <ExampleSpec examples="2">
                 <Example i="1">
@@ -126,12 +126,7 @@
               </ExampleSpec>
             </witness>
           </Witness>
-          <Learn randomK="null" k="all" depth="2" retrievedFromCache="false" symbol="myInputString" elapsed="00:00:00.0225727">
-            <result>
-              <Direct size="1" symbol="myInputString">
-                <Program i="0"><![CDATA[myInputString]]></Program>
-              </Direct>
-            </result>
+          <Learn randomK="null" retrievedFromCache="false" k="all" symbol="myInputString" depth="2" elapsed="00:00:00.0219032">
             <spec>
               <ExampleSpec examples="2">
                 <Example i="1">
@@ -150,8 +145,13 @@
                 </Example>
               </ExampleSpec>
             </spec>
+            <result>
+              <Direct size="1" symbol="myInputString">
+                <Program i="0"><![CDATA[myInputString]]></Program>
+              </Direct>
+            </result>
           </Learn>
-          <Witness index="1" function="WitnessFunctions.WitnessSubstring_startPos" param="startPos" elapsed="00:00:05.4904145">
+          <Witness function="WitnessFunctions.WitnessSubstring_startPos" index="1" param="startPos" elapsed="00:00:04.7844389">
             <witness>
               <DisjunctiveExamplesSpec examples="2">
                 <Example i="1">
@@ -211,10 +211,7 @@
               </ExampleSpec>
             </prereqs.length>
           </Witness>
-          <Learn randomK="null" k="all" depth="2" retrievedFromCache="false" symbol="startPos" elapsed="00:00:00.0585444">
-            <result>
-              <Direct size="0" symbol="startPos" />
-            </result>
+          <Learn randomK="null" retrievedFromCache="false" k="all" symbol="startPos" depth="2" elapsed="00:00:00.0555838">
             <spec>
               <DisjunctiveExamplesSpec examples="2">
                 <Example i="1">
@@ -237,32 +234,35 @@
                 </Example>
               </DisjunctiveExamplesSpec>
             </spec>
-            <LearnRule programCount="0" rule="RegexFunction" elapsed="00:00:00.0173456">
+            <result>
+              <Direct size="0" symbol="startPos" />
+            </result>
+            <LearnRule programCount="0" elapsed="00:00:00.0160332" rule="RegexFunction">
               <result>
                 <Direct size="0" symbol="startPos" />
               </result>
-              <UsePlan hasDependencies="false" elapsed="00:00:00.0165557" plan="[&quot;GrammarRule.WitnessAll&quot;, &quot;GrammarRule.WitnessAll&quot;, &quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;]" verify="true">
-                <Witness index="0" function="GrammarRule.WitnessAll" param="iTH" elapsed="00:00:00.0003411">
+              <UsePlan plan="[&quot;GrammarRule.WitnessAll&quot;, &quot;GrammarRule.WitnessAll&quot;, &quot;&lt;&gt;c__DisplayClass60_0.&lt;InitializeStandardWitnessFunctions&gt;b__0&quot;]" hasDependencies="false" elapsed="00:00:00.0152790" verify="true">
+                <Witness function="GrammarRule.WitnessAll" index="0" param="iTH" elapsed="00:00:00.0003286">
                   <witness>
                     <TopSpec examples="0" />
                   </witness>
                 </Witness>
-                <Learn randomK="null" k="all" depth="3" retrievedFromCache="false" symbol="iTH" elapsed="00:00:00.0155548">
-                  <result>
-                    <Direct size="0" symbol="iTH" />
-                  </result>
+                <Learn randomK="null" retrievedFromCache="false" k="all" symbol="iTH" depth="3" elapsed="00:00:00.0148835">
                   <spec>
                     <TopSpec examples="0" />
                   </spec>
+                  <result>
+                    <Direct size="0" symbol="iTH" />
+                  </result>
                 </Learn>
               </UsePlan>
             </LearnRule>
-            <LearnRule programCount="0" rule="~convert_startPos_posA" elapsed="00:00:00.0257041">
+            <LearnRule programCount="0" elapsed="00:00:00.0280517" rule="~convert_startPos_posA">
               <result>
                 <Direct size="0" symbol="startPos" />
               </result>
-              <UsePlan hasDependencies="false" elapsed="00:00:00.0150849" plan="[&quot;ConversionWitnessingPlan.Witness&quot;]" verify="false">
-                <Witness index="0" function="ConversionWitnessingPlan.Witness" param="posA" elapsed="00:00:00.0026791">
+              <UsePlan plan="[&quot;ConversionWitnessingPlan.Witness&quot;]" hasDependencies="false" elapsed="00:00:00.0157397" verify="false">
+                <Witness function="ConversionWitnessingPlan.Witness" index="0" param="posA" elapsed="00:00:00.0035019">
                   <witness>
                     <ExampleSpec examples="2">
                       <Example i="1">
@@ -282,10 +282,7 @@
                     </ExampleSpec>
                   </witness>
                 </Witness>
-                <Learn randomK="null" k="all" depth="3" retrievedFromCache="false" symbol="posA" elapsed="00:00:00.0123747">
-                  <result>
-                    <Direct size="0" symbol="posA" />
-                  </result>
+                <Learn randomK="null" retrievedFromCache="false" k="all" symbol="posA" depth="3" elapsed="00:00:00.0122095">
                   <spec>
                     <ExampleSpec examples="2">
                       <Example i="1">
@@ -304,7 +301,10 @@
                       </Example>
                     </ExampleSpec>
                   </spec>
-                  <LearnRule programCount="0" rule="posA := System.Int32" usedLearner="LiteralLearner_Examples" elapsed="00:00:00.0002551">
+                  <result>
+                    <Direct size="0" symbol="posA" />
+                  </result>
+                  <LearnRule programCount="0" elapsed="00:00:00.0001994" rule="posA := System.Int32" usedLearner="LiteralLearner_Examples">
                     <result>
                       <Direct size="0" symbol="posA" />
                     </result>

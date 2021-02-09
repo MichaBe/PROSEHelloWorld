@@ -31,8 +31,5 @@
 
     [FeatureCalculator("iTH", Method = CalculationMethod.FromLiteral)]
     public static int Score_iTH(int iTH) => 0;
-
-    [FeatureCalculator("AbsPos", Method = CalculationMethod.FromChildrenFeatureValues)]
-    public static int Score_AbsPos(int sFV, int posFV) => sFV + posFV + 1;
   }
 }

@@ -22,10 +22,5 @@
       var m = regex.Matches(s);
       return m.Count != 0 && i < m.Count ? m[i].Index : (int?)null;
     }
-
-    public static int? AbsPos(string s, int pos)
-    {
-      return 0 <= pos && pos < s.Length ? pos : (int?)null;
-    }
   }
 }

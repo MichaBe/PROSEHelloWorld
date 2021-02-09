@@ -107,11 +107,5 @@
       }
       return new DisjunctiveExamplesSpec(result);
     }
-
-    [WitnessFunction(nameof(Semantics.AbsPos), parameterSymbolName: "posA", DependsOnParameters =new[]{0}, Verify =true)]
-    DisjunctiveExamplesSpec WitnessAbsPos_posA(GrammarRule rule, ExampleSpec spec, ExampleSpec spec0)
-    {
-      return null;
-    }
   }
 }

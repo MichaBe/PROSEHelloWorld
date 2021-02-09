@@ -24,9 +24,6 @@
       return iTHFV * rFV * myInputStringFV;
     }
 
-    [FeatureCalculator("AbsPos", Method=CalculationMethod.FromChildrenFeatureValues)]
-    public static double Score_AbsPos(int sFV, int posFV) => sFV * posFV;
-
     [FeatureCalculator("posA", Method = CalculationMethod.FromLiteral)]
     public static double Score_posA(int posA) => 0.5;
 
